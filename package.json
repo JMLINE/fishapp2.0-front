@@ -11,7 +11,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-next-paging": "^7.0.7",
-    "react-scripts": "3.3.0",
+    "react-scripts": "^4.0.3",
     "react-scroll-up-button": "^1.6.4",
     "react-sticky-footer": "0.1.0-rc3",
     "reactstrap": "^8.9.0"
