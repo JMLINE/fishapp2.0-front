@@ -7,9 +7,9 @@ switch (window.location.hostname) {
         APIURL = 'http://localhost:3000/';
         break;
         // this is the deployed react application
-    case 'jl-fishapp-client.herokuapp.com':
+    case 'https://efa-cors-anywhere.herokuapp.com/jl-fishapp-client.herokuapp.com':
         // this is the full url of your deployed API
-        APIURL = 'https://jl-fishapp-server.herokuapp.com/'
+        APIURL = 'https://efa-cors-anywhere.herokuapp.com/https://jl-fishapp-server.herokuapp.com/'
 }
 
 export default APIURL;
