@@ -25,7 +25,7 @@ const FishIndex = (props) => {
   };
 
   const fetchFishPost = () => {
-    fetch(`${APIURL}api/fished`, {
+    fetch(`${APIURL}/api/fished`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",
@@ -45,12 +45,11 @@ const FishIndex = (props) => {
 
   return (
     <Container>
-      <h1 className="fishTitle">Fishes</h1>
+      <h1 className="fishTitle"> Fishes </h1>{" "}
       <Row>
         <Col md="2">
-          <FishModal fetchFishPost={fetchFishPost} token={props.token} />
+          <FishModal fetchFishPost={fetchFishPost} token={props.token} />{" "}
         </Col>
-
         <Col md="8">
           <FishTable
             fished={fished}
@@ -58,9 +57,10 @@ const FishIndex = (props) => {
             token={props.token}
             editUpdateFish={editUpdateFish}
             updateOn={updateOn}
-          />
-        </Col>
+          />{" "}
+        </Col>{" "}
         <Col md="2">
+          {" "}
           {updateActive ? (
             <UpdateFish
               fishToUpdate={fishToUpdate}
@@ -68,9 +68,9 @@ const FishIndex = (props) => {
               token={props.token}
               fetchFishPost={fetchFishPost}
             />
-          ) : null}
-        </Col>
-      </Row>
+          ) : null}{" "}
+        </Col>{" "}
+      </Row>{" "}
     </Container>
   );
 };

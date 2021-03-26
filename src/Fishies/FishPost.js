@@ -21,7 +21,7 @@ const FishPost = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    fetch(`${APIURL}api/createpost`, {
+    fetch(`${APIURL}/api/createpost`, {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/json",
@@ -52,8 +52,7 @@ const FishPost = (props) => {
 
   return (
     <>
-      <br></br>
-      <h3>Post a Fish!</h3>
+      <br> </br> <h3> Post a Fish! </h3>{" "}
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <Label htmlFor="Species" />
@@ -65,14 +64,13 @@ const FishPost = (props) => {
             name="Species"
             value={species}
           >
-            <option value="">Select Species</option>
-            <option value="Bass">Bass</option>
-            <option value="Trout">Trout</option>
-            <option value="Bluegill">Bluegill</option>
-            <option value="Carp">Carp</option>
-          </Input>
+            <option value=""> Select Species </option>{" "}
+            <option value="Bass"> Bass </option>{" "}
+            <option value="Trout"> Trout </option>{" "}
+            <option value="Bluegill"> Bluegill </option>{" "}
+            <option value="Carp"> Carp </option>{" "}
+          </Input>{" "}
         </FormGroup>
-
         <FormGroup>
           <Label htmlFor="Size" />
           <Input
@@ -83,9 +81,8 @@ const FishPost = (props) => {
             }}
             value={size}
           />
-          (Inches)
+          (Inches){" "}
         </FormGroup>
-
         <FormGroup>
           <Label htmlFor="Fly" />
           <Input
@@ -95,9 +92,8 @@ const FishPost = (props) => {
               setFly(e.target.value);
             }}
             value={fly}
-          />
+          />{" "}
         </FormGroup>
-
         <FormGroup>
           <Label htmlFor="Location" />
           <Input
@@ -107,8 +103,8 @@ const FishPost = (props) => {
               setLocation(e.target.value);
             }}
             value={location}
-          />
-        </FormGroup>
+          />{" "}
+        </FormGroup>{" "}
         <FormGroup>
           <Label htmlFor="Photo" />
           <Input
@@ -118,25 +114,35 @@ const FishPost = (props) => {
               setPhoto(e.target.value);
             }}
             value={photo}
-          />
-        </FormGroup>
+          />{" "}
+        </FormGroup>{" "}
         <Container>
           <Row>
             <Col>
-              <Button style={{ background: "green" }} type="submit">
-                Click to Submit
-              </Button>
-            </Col>
+              <Button
+                style={{
+                  background: "green",
+                }}
+                type="submit"
+              >
+                Click to Submit{" "}
+              </Button>{" "}
+            </Col>{" "}
             <Col>
               <div className="cancelButton">
-                <Button style={{ background: "red" }} onClick={props.toggle}>
-                  Cancel
-                </Button>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </Form>
+                <Button
+                  style={{
+                    background: "red",
+                  }}
+                  onClick={props.toggle}
+                >
+                  Cancel{" "}
+                </Button>{" "}
+              </div>{" "}
+            </Col>{" "}
+          </Row>{" "}
+        </Container>{" "}
+      </Form>{" "}
     </>
   );
 };

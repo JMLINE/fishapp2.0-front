@@ -10,7 +10,7 @@ const Signup = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`${APIURL}api/user/createuser`, {
+    fetch(`${APIURL}/api/user/createuser`, {
       method: "POST",
       body: JSON.stringify({
         user: {
@@ -40,7 +40,7 @@ const Signup = (props) => {
             value={username}
             required
           />
-        </FormGroup>
+        </FormGroup>{" "}
         <FormGroup>
           <Label htmlFor="newEmail"> Email </Label>{" "}
           <Input
@@ -49,7 +49,7 @@ const Signup = (props) => {
             name="email"
             value={newEmail}
           />{" "}
-        </FormGroup>
+        </FormGroup>{" "}
         <FormGroup>
           <Label htmlFor="password"> Password </Label>{" "}
           <Input
@@ -64,7 +64,7 @@ const Signup = (props) => {
           {" "}
           Signup{" "}
         </Button>{" "}
-      </Form>
+      </Form>{" "}
     </div>
   );
 };

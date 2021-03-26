@@ -9,7 +9,7 @@ function Login(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`${APIURL}api/user/signin`, {
+    fetch(`${APIURL}/api/user/signin`, {
       method: "POST",
       body: JSON.stringify({
         user: {
@@ -33,31 +33,34 @@ function Login(props) {
   };
   return (
     <div>
-      <h1>Login</h1>
+      <h1> Login </h1>{" "}
       <Form onSubmit={handleSubmit}>
+        {" "}
         {errorMessage == "" ? (
           <> </>
         ) : (
           <div
-            style={{ background: "red" }}
+            style={{
+              background: "red",
+            }}
             className="alert alert-danger"
             role="alert"
           >
-            Username and password combination is incorrect. Please try again.
+            Username and password combination is incorrect.Please try again.{" "}
           </div>
-        )}
+        )}{" "}
         <FormGroup>
-          <Label htmlFor="username">Username</Label>
+          <Label htmlFor="username"> Username </Label>{" "}
           <Input
             onChange={(e) => {
               setUsername(e.target.value);
             }}
             name="username"
             value={username}
-          />
-        </FormGroup>
+          />{" "}
+        </FormGroup>{" "}
         <FormGroup>
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password"> Password </Label>{" "}
           <Input
             onChange={(e) => {
               setPassword(e.target.value);
@@ -65,12 +68,12 @@ function Login(props) {
             name="password"
             type="password"
             value={password}
-          />
-        </FormGroup>
+          />{" "}
+        </FormGroup>{" "}
         <Button color="dark" type="submit">
           Login{" "}
-        </Button>
-      </Form>
+        </Button>{" "}
+      </Form>{" "}
     </div>
   );
 }
